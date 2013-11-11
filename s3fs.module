@@ -113,6 +113,12 @@ function s3fs_admin() {
     '#description'    => t('Forces S3 File System to always generate HTTPS URLs for files in your bucket, e.g. "https://mybucket.s3.amazonaws.com/smiley.jpg".'),
     '#default_value'  => variable_get('s3fs_use_https', FALSE),
   );
+  $form['s3fs_allow_relative'] = array(
+    '#type'           => 'checkbox',
+    '#title'          => t('Allow root-relative paths for s3 files'),
+    '#description'    => t('Allows S3 File System to generate relative URLs to files in your bucket, e.g. "/images/smiley.jpg". This will only have any meaning if you use a CNAME setting that sets the domin the same as your drupal site\'s domain.'),
+    '#default_value'  => variable_get('s3fs_allow_relative', FALSE),
+  );
   $form['s3fs_customhost'] = array(
     '#type'           => 'checkbox',
     '#title'          => t('Use a Custom Hostname'),

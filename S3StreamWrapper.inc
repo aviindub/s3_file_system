@@ -164,6 +164,9 @@ class S3StreamWrapper implements DrupalStreamWrapperInterface {
     // CNAME support for customizing S3 URLs.
     if (variable_get('s3fs_cname', FALSE)) {
       $domain = variable_get('s3fs_domain', '');
+      if (variable_get('s3fs_allow_relative', FALSE) && strpos($domain, '/') === 0) {
+        $domain = $_SERVER['HTTP_HOST'] . $domain;
+      } 
       if ($domain) {
         $this->domain = "$scheme://$domain";
       }
