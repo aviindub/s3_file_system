@@ -251,8 +251,6 @@ function s3fs_refresh_cache_submit($form, &$form_state) {
   _s3fs_refresh_cache($form_state['values']['s3fs_bucket']);
 }
 
-function s3fs_amazons3_api_compatibility($form)
-
 /**
  * Generates an image derivative in S3.
  *
