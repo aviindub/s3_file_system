@@ -3,7 +3,7 @@ description = Adds an Amazon Simple Storage Service-based remote file system to 
 core = 7.x
 configure = admin/config/media/s3fs
 
-dependencies[] = awssdk (>=5.1)
+dependencies[] = awssdk
 dependencies[] = libraries (2.x)
 
 ; Includes
