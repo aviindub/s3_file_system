@@ -195,8 +195,8 @@ function s3fs_admin() {
     '#default_value' => variable_get('s3fs_ignore_cache', 0),
   );
   $form = system_settings_form($form);
-  $form['#submit'][] = 's3fs_amazons3_api_compatibility'
-  return $form
+  $form['#submit'][] = 's3fs_amazons3_api_compatibility';
+  return $form;
 }
 
 /**
